@@ -8,6 +8,7 @@
 
 
 # Note from the Authors
+This analysis is based on the study of data science and machine learning applied to open-source raw data. We are not health professionals or epidemiologists, we are mathematicians and statisticians with Ph.D.'s.  We are from a variety of socio-economic, political, and religious backgrounds with a common interest in math and science.  **We treat this issue as academic research, without bias, and all references are provided as hyperlinks**. As mathematicians, statisticians and data scientists, it is our job to analyze data to help others make informed (no hype) data-driven decisions.  In the last 11 months we have worked with world-class epidemiologists to assist them with the math and statistics, and our analysis has been briefed at the highest levels of the US government.  
  - Our **theoretical analysis** is based on journal papers and articles on infectious diseases, mental health, criminal behavior, and economics.  
  - Our **practical analysis** is based on conversations, interviews, and collaboration with experts in epidemiology, law enforcement, mental health, and economics.  
 
