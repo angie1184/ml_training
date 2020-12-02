@@ -22,7 +22,7 @@ You can get the latest information for the USA at [coronavirus.gov](https://www.
 
 
 
-# Summary
+# Summary: TL;DR.
 We have been tracking this issue for the last 11 months using COVID-19 raw data obtained from the [CDC and John's Hopkins](#Data_Collection). In summary we have found the following:
 
 - **Death toll:** Initially the CDC expected 520,000 deaths in the US; roughly 0.157% of the total US population, with a worst case projection of 2.5 million deaths.  As of December 1, the [death toll is 0.081% of the US population, or 51% of the initial estimates by the CDC](#COVID-19_Analysis) (however, the pandemic is not over yet). **It is important to keep this pandemic in perspective compared to other causes of death.**  The present COVID-19 death rate is 803.2 deaths per day, compare this to the [top 5 causes of death (averages per day) in the USA](#Averages): 
