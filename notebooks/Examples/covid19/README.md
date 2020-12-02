@@ -4,7 +4,19 @@
 </p>
 
 
-**---UPDATED November 16, 2020---**
+**---UPDATED December 1, 2020---**
+
+
+# Note from the Authors
+ - Our **theoretical analysis** is based on journal papers and articles on infectious diseases, mental health, criminal behavior, and economics.  
+ - Our **practical analysis** is based on conversations, interviews, and collaboration with experts in epidemiology, law enforcement, mental health, and economics.  
+
+
+
+
+**This article should not be interpreted as professional advice.**
+**If you are concerned that you may have contracted COVID-19**, you can take an **online screening test** created by [Apple in collaboration with the CDC](https://www.apple.com/covid19).
+You can get the latest information for the USA at [coronavirus.gov](https://www.coronavirus.gov/).
 
 
 # Table of Contents
@@ -32,40 +44,38 @@
 
 [12. Masks](#Masks)
 
-[13. Great videos to watch](#Great_videos)
+[13. Hyrdoxychloroquine](#Hyrdoxychloroquine)
 
-[14. Conclusion](#Conclusion)
+[14. Great videos to watch](#Great_videos)
+
+[15. Conclusion](#Conclusion)
 
 [References](#References)
 
-
-# Thought of the Day
-**Dr. Fauci lead a Coronavirus research team at NIH in 2005** that published an article stating that ["Chloroquine has strong antiviral effects on SARS-Coronavirus infection"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1232869/).  The article states that **Chloroquine is effective against both "infection and spread"**.  Recent research (11/11/2020) from NIH shows that [hyrdoxychloroquine is effective as a COVID-19 inhibitor](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7656897/) (prophylactic). 
 
 
 
 # Preface
 We have been tracking this issue for the last 10 months using COVID-19 raw data obtained from the CDC and John's Hopkins. In summary we have found the following:
 
-- **Death toll:** Initially the CDC expected 520,000 deaths in the US; roughly 0.157% of the total US population.  As of September 16, the [death toll is 0.058% of the US population, or 37% of the initial estimates by the CDC](#COVID-19_Analysis) (however, the pandemic is not over yet). 
+- **Death toll:** Initially the CDC expected 520,000 deaths in the US; roughly 0.157% of the total US population, with a worst case projection of 2.5 million deaths.  As of December 1, the [death toll is 0.081% of the US population, or 51% of the initial estimates by the CDC](#COVID-19_Analysis) (however, the pandemic is not over yet). The present death toll is 803.2 deaths per day.  Compare COVID-19 to the [top 5 causes of death in the USA](#Averages): 
+	- Cancer: 26,302 deaths per day
+	- Heart Disease: 24,658 deaths per day
+	- Diabetes: 3,753 deaths per day
+	- Car accidents: 3,287 deaths per day
+	- Suicides: 3,000 deaths per day
 - **Epidemic:** The [CDC and WHO define an epidemic threshold](#COVID-19_Analysis) as the week when the number of cases surpass 200 per week per 100,000 people.  In the example of California and Texas (the two most populous states), they are 53.7% and 64.3% below epidemic levels respectively, with the week of May 9 being the worst week of new cases.
-- **Lock-Down:** Further analysis is needed to see if the lock-down was effective.  [This section](#Open_for_Business_plots) provides nice plots.  Within 3 days of the first detected COVID-19 case, the US stopped all flights from China.  The number of new cases per day were below 100 when the US closed its borders, and a national emergency was declared 2 days later.  The data is so noisy, that it is difficult to determine the effectiveness of the lock-down (California is a good example of noisy data with daily spikes that are double the daily average, ultimately skewing the mean).
-- **Re-opening:** Initial analysis of indicates that social distancing and stay-at-home orders are inefective; in particular see the comparison of [California and Texas](#Open_for_Business).  The USA now has a [log-log slope](#log-log_plot) less than the slope for monthly doubling time. This is an indication that the USA, like many countries, has been successful in dramatically slowing the spread of COVID-19.  Also note that many countries have started to re-open and the slope is unchanged after re-opening.  Texas was one of the first states to re-open, and the data suggests that re-opening has little effect on the spread of COVID-19.
+- **Lock-Down:** Lock-downs are not effective in preventing the spread of COVID-19 unless a total lockdown is enforced, e.g. no mail delivery, no movement of any kind for 2-4 weeks.  The US Supreme Court recently ruled this as unconstitutional.  [This section](#Open_for_Business_plots) provides nice plots of a continued spread  while both Texas and California were locked down.
+- **Re-opening:** Social distancing and stay-at-home orders are ineffective; in particular see the comparison of [California and Texas](#Open_for_Business).  The USA now has a [log-log slope](#log-log_plot) less than the slope for monthly doubling time. This is an indication that the USA, like many countries, has been successful in dramatically slowing the spread of COVID-19.  Also note that many countries have started to re-open and the slope is unchanged after re-opening.  Texas was one of the first states to re-open, and the data suggests that re-opening has little effect on the spread of COVID-19.
 - **R0:** CDC initial estimates of the rate of spread, R0, was 2.5-5.  [Current data suggests R0=1.17](#R_nought) (not very contagious), before and during lock-down.  For reference the common flu is R0=0.9-2.1, and measles is R0=12-18 (very contagious).
 - **Testing:** [According to multiple studies](#Bayes_Theorem_and_Coronavirus), there are four types of COVID-19 tests.  Of them, the **false-positive rate is 15-45%**.  As more data is collected and testing improves, the CDC anticipates false positive rates similar to other tests, e.g. AIDS testing has a false-positive rate less than 1%.  A recent 2020 study by the premiere science journal [Nature](https://www.nature.com/articles/s41591-020-0843-2) found that the majority of those infected with COVID-19 did not spread the "viral load" regardless of using a face mask.
 - **Mental Health:** [According to the literature](#Open_for_Business) on isolation and lock-downs due to epidemics, the secondary effects generally fall into two categories; mental health and economic health.  The [Didi Hirsch Suicide Hotline](https://didihirsch.org/media/recent-coverage/oc-register-suicide-help-hotline-calls-soar-in-southern-california-over-coronavirus-anxieties/) noted an **8000% increase** (that is not a typo) in call volume for March and April, and a significant increase in suicides.  The [National Domestic Violence Hotline](https://www.thehotline.org/help/) noted a 45% increase in calls, and the highest number of domestic violence related deaths in 11 years.
 - **Economic Health:** According to a [World Bank study](https://elibrary.worldbank.org/doi/abs/10.1596/1813-9450-5391), 77% debt-to-GDP is the tipping point for an economy prior to recession.  The current [USA debt-to-GDP](https://www.bea.gov/data/gdp/gross-domestic-product) is 110%.
-- **Stock Market:** According to [data pulled from 1920-2020](#Stock_Market_Analysis), events of economic decline were always followed by a return.  For example, after the 9/11 attacks, the stock market had a drop for 61 days before returning to pre-9/11 levels.  Similarly, the 2008 Recession took 532 days to recover.  Historical data suggests that the current drop may last several months.
+- **Stock Market:** According to [data pulled from 1920-2020](#Stock_Market_Analysis), events of economic decline were always followed by a return.  For example, after the 9/11 attacks, the stock market had a drop for 61 days before returning to pre-9/11 levels.  Similarly, the 2008 Recession took 532 days to recover.  Historical data suggests that the current drop may last several months.  Actual data demonstrated that **the market recovered in 200 days** (05/01/2020 to 11/17/2020).
 - **Population:** [Current data suggests](#Open_for_Business) that the least COVID-19 affected population is ages 0-18 (so far only 12 child deaths in the US), and the most affected population is 65+ with pre-existing health conditions.  the [65+ age group account for 95% of the COVID-19 deaths](https://www.medrxiv.org/content/10.1101/2020.04.05.20054361v1.full.pdf).
-- **Masks:** The [latest research](#Masks) indicates that masks are **less than 3% effective** in preventing COVID-19 transmission. Speficically, the **"moisture retention, reuse of cloth masks and poor filtration may result in increased risk of infection."** 
+- **Masks:** The [latest research](#Masks) indicates that masks are **less than 3% effective** in preventing COVID-19 transmission. Specifically, the "moisture retention, reuse of cloth masks and poor filtration may result in increased risk of infection." 
+- **Hyrdoxychloroquine:** Chloroquine, used to treat malaria since the 1800's, has many derivatives, e.g. Hyrdoxychloroquine, for prophylactic use. The [latest research](#Hyrdoxychloroquine) indicates that "Chloroquine has strong antiviral effects on SARS-Coronavirus infection".
 
-
-**Note from the authors:** This analysis is based on the study of data science and machine learning applied to open-source raw data. We are not health professionals or epidemiologists, we are mathematicians and statisticians.  In the last 9 months we have worked with world-class epidemiologists to assist them with the math and statistics.  Our theoretical analysis is based on journal papers and articles on infectious diseases, mental health, criminal behavior, and economics.  Our practical analysis is based on conversations and collaboration with experts in epidemiology, law enforcement, mental health, and economics.  This article should not be interpreted as professional advice.  All references are provided as hyperlinks.
-
-
-**If you are concerned that you may have contracted COVID-19**, you can take an **online screening test** created by [Apple in collaboration with the CDC](https://www.apple.com/covid19).  
-
-You can get the latest information for the USA at [coronavirus.gov](https://www.coronavirus.gov/).
 
 
 # 1. Introduction <a name="Introduction"/>
@@ -155,9 +165,9 @@ The CDC estimates [[36](https://www.cdc.gov/coronavirus/2019-ncov/index.html)] t
 
 	(520,000 / 329,227,746) * 100 = 0.157%
 	
-The current death percent of population (September 16, 2020) is 0.058% (roughly 6 in every 10,000 people):
+**The current death percent of population (December 1, 2020) is 0.081% (roughly 8 in every 10,000 people):**
 	
-	(194,071 / 329,227,746) * 100 = 0.058%
+	(269,071 / 329,227,746) * 100 = 0.081%
 	
 Compare this to [other epidemics](#Averages).
 
@@ -209,7 +219,7 @@ The mortality rate for each country versus the test positive rate.  For example,
 ## 4.4 Log-Log Plots <a name="log-log_plot"/>
 Log-Log plots are a better form with which to look at data, specifically epidemics and the "doubling" time or spread of a virus.  A doubling is indicated by a straight line, where the slope indicate the number of days for doubling, whereas a curve to the right indicates a slowing of the spread of the virus.  We have provided "doubling" lines, at various rates, and curves for top 10 countries (with the most cases).  
 
-**Note that the USA now has a slope less than the slope for monthly doubling time.** This is an indication that the USA, like many contries, has been successful in dramatically slowing the spread of COVID-19.  **Also note that many countries have started to re-open and the slope is unchanged after re-opening.**
+**Note that the USA now has a slope less than the slope for monthly doubling time.** This is an indication that the USA, like many countries, has been successful in dramatically slowing the spread of COVID-19.  **Also note that many countries have started to re-open and the slope is unchanged after re-opening.**
 
 
 <p align="center">
@@ -346,7 +356,7 @@ The following is the number of *DEATHS PER DAY ON AVERAGE* from the links above.
 - Malaria = 1,200
 - Homicide = 1,111
 - Drowning = 877
-- Alcohol_disorder = 507
+- Alcohol disorder = 507
 - Fire = 331
 - Stroke = 384 (USA only)
 - Common Flu = 143 (USA only)
@@ -677,17 +687,32 @@ Some questions to consider:
  - How do you evaluate these both together and individually, and what are the risks?
 
  
+ 
+ 
+ 
 # 12. Masks <a name="Masks"/>
 The SARS-CoV-2 virus particle is [70-90 nanometers](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7045880/), and a single spray paint particle is [20-40 micrometers](https://www.cdc.gov/niosh/nioshtic-2/00210447.html), and an N-95 mask filters particles larger than [0.3 micrometers](https://www.cdc.gov/niosh/nioshtic-2/00210447.html).
 
-If 0.3 micrometers = 300 nanometers, then **N-95 masks cannot filter items smaller than 300 nanometers**, therefore **N-95 masks cannot filter SARS-CoV-2 virus particles**.  Simple math (300/90=3.33) shows us that COVID-19 particles are **3 times smaller** than what a "premium" mask (nevermind home-made masks) is capable of filtering. Most masks available to the public will not filter out COVID-19 particles.  Therefore a mask will not protect you, nor will it protect others.
+If 0.3 micrometers = 300 nanometers, then **N-95 masks cannot filter items smaller than 300 nanometers**, therefore **N-95 masks cannot filter SARS-CoV-2 virus particles**.  Simple math (300/90=3.33) shows us that COVID-19 particles are **3 times smaller** than what a "premium" mask (never mind home-made masks) is capable of filtering. Most masks available to the public will not filter out COVID-19 particles.  Therefore a mask will not protect you, nor will it protect others.
 
 **A practical experiment** -- 
-When you use a can of spray paint, the odor you smell is volatile organic compounds (VOCs), which are [less than 3 micrometers in size](https://www.cosatron.com/applications/volatile-organic-compound-control/), and in many cases [less than 50 nanometers](https://pubmed.ncbi.nlm.nih.gov/22168093/).  According to current research, even expensive charcoal-based filters are not able to mask the odor caused by high VOC levels.  Notice that **these particles are nearly the same size as the SARS-CoV-2 virus particle.**  The experiment: use a spray can, if you can smell the odor, your mask is ineffective agianst COVID-19. 
+When you use a can of spray paint, the odor you smell is volatile organic compounds (VOCs), which are [less than 3 micrometers in size](https://www.cosatron.com/applications/volatile-organic-compound-control/), and in many cases [less than 50 nanometers](https://pubmed.ncbi.nlm.nih.gov/22168093/).  According to current research, even expensive charcoal-based filters are not able to mask the odor caused by high VOC levels.  Notice that **these particles are nearly the same size as the SARS-CoV-2 virus particle.**  The experiment: use a spray can, if you can smell the odor, your mask is ineffective against COVID-19. 
 
 A 2014 research paper from the British Medical Journal found that cloth masks were [less than 3% effective in protecting the individual](https://bmjopen.bmj.com/content/5/4/e006577.short).  As stated in the article, of the 1607 people who participated in the study, for Clinical respiratory illness (CRI), influenza-like illness (ILI) and laboratory-confirmed respiratory virus infection, the ["Penetration of cloth masks by particles was almost 97% and medical masks 44%."](https://bmjopen.bmj.com/content/5/4/e006577.short).  The study also noted the effectiveness of the seal of the mask to the skin on the face of the individual, and discounted the transmission through the eyes. A [2015 study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4420971/) on the same topic suggests that an N95 mask with a rubber gasket (similar to an industrial painting mask) is the most effective, they state "Laboratory tests showed the penetration of particles through the cloth masks to be very high (97%) compared with medical masks (44%) (used in trial) and 3M 9320 N95 (<0.01%), 3M Vflex 9105 N95 (0.1%)."  The article goes on to state "Conclusions:  This study is the first RCT of cloth masks, and the **results caution against the use of cloth masks**. This is an important finding to inform occupational health and safety. **Moisture retention, reuse of cloth masks and poor filtration may result in increased risk of infection.** Further research is needed to inform the widespread use of cloth masks globally. However, as a precautionary measure, cloth masks should not be recommended for HCWs, particularly in high-risk situations, and guidelines need to be updated." The WHO provided further guidance in April 2020 ([here](https://apps.who.int/iris/handle/10665/331693) and [here](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjE_cCygO_rAhUHHqwKHfCMA_gQFjACegQIBBAB&url=https%3A%2F%2Fapps.who.int%2Firis%2Frest%2Fbitstreams%2F1279750%2Fretrieve&usg=AOvVaw3OEk7GblHnLXwd5oEzXFJ1) ) stating "There is limited evidence that wearing a medical mask by healthy individuals in  households,  in  particular  those  who  share  a  house  with  a  sick person, or among attendees of mass gatherings may be beneficial  as  a  measure  preventing  transmission."  A recent 2020 study by the premiere science journal [Nature](https://www.nature.com/articles/s41591-020-0843-2) found that the majority of those infected with COVID-19 did not spread the "viral load" in exhaled breath regardless of using a face mask.  In fact the viral load in exhaled breath was so low, among those who tested positive, as to be "undetectable" during a 30 minute test in a laboratory environment with exceptionally sensitive equipment.  The [CDC](https://wwwnc.cdc.gov/eid/article/26/10/20-0948_article) updated its guidance stating that recent studies of cloth masks "may prevent" transmission of viruses, but did not quantify their results.
 
-# 13. Great Videos to Watch <a name="Great_videos"/>
+
+
+
+
+# 13. Hyrdoxychloroquine <a name="Hyrdoxychloroquine"/>
+Hyrdoxychloroquine is a medicine used to treat malaria.  Chloroquine is derived from tree bark found in the Amazon, surprisingly co-located in areas with malaria cases and used by indigenous people for hundreds of years as a treatment for malaria. Since the 1930's, Chloroquine has been used by several African countries with high case counts of malaria.  **Dr. Fauci lead a Coronavirus research team at NIH in 2005** that published an article stating that ["Chloroquine has strong antiviral effects on SARS-Coronavirus infection"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1232869/).  The article states that **Chloroquine is effective against both "infection and spread"**.  Recent research (11/11/2020) from NIH shows that [hyrdoxychloroquine is effective as a COVID-19 inhibitor](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7656897/) (prophylactic).
+
+
+
+
+
+
+# 14. Great Videos to Watch <a name="Great_videos"/>
  - ["Exponential growth and epidemics"](https://youtu.be/Kas0tIxDvrg)
  - ["Understanding R nought | Khan Academy"](https://youtu.be/jKUGZvW99os)
  - ["Estimating actual COVID 19 cases (novel corona virus infections) in an area based on deaths"](https://youtu.be/mCa0JXEwDEk)
@@ -700,8 +725,8 @@ A 2014 research paper from the British Medical Journal found that cloth masks we
  
 
 
-# 14. Conclusion <a name="Conclusion"/>
-So why did we go through all of this trouble, and where are we on the Sigmoid curve?  Well, like any problem, we like to have as much data as possible to make good scientific decisions, and compare results where possible.  In this case, it is nice to compare COVID-19 to the common flu, SARS, MERS, etc.  As you will likely find, as we did, if you are younger than 60 [[44](https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications.html)], you may contract COVID-19 but are less likely to die of COVID-19.  However, it is advisable to closely follow the CDC guidelines [[45](https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html)] of social distancing and personal health precautions.  
+# 15. Conclusion <a name="Conclusion"/>
+So why did we go through all of this trouble, and where are we on the Sigmoid curve?  Well, like any problem, we like to have as much data as possible to make good scientific decisions, and compare results where possible.  In this case, it is nice to compare COVID-19 to the common flu, SARS, MERS, etc.  As you will likely find, as we did, if you are younger than 60 [[44](https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications.html)], you may contract COVID-19 but are less likely to die of COVID-19.  However, it is advisable to closely follow the CDC guidelines [[45](https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html)] of personal health precautions.  
 
 The IHME COVID-19 SIR models can be found at [[48](http://www.healthdata.org/covid)], and world population data [[49](https://www.populationpyramid.net/)].
 
