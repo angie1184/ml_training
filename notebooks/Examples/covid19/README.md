@@ -26,11 +26,11 @@ You can get the latest information for the USA at [coronavirus.gov](https://www.
 We have been tracking this issue for the last 11 months using COVID-19 raw data obtained from the [CDC and John's Hopkins](#Data_Collection). In summary we have found the following:
 
 - **Death toll:** Initially the CDC expected 520,000 deaths in the US; roughly 0.157% of the total US population, with a worst case projection of 2.5 million deaths.  As of December 1, the [death toll is 0.081% of the US population, or 51% of the initial estimates by the CDC](#COVID-19_Analysis) (however, the pandemic is not over yet). **It is important to keep this pandemic in perspective compared to other causes of death.**  The present COVID-19 death rate is 803.2 deaths per day, compare this to the [top 5 causes of death (averages per day) in the USA](#Averages): 
-	- Cancer: 26,302 deaths per day
-	- Heart Disease: 24,658 deaths per day
-	- Diabetes: 3,753 deaths per day
-	- Car accidents: 3,287 deaths per day
-	- Suicides: 3,000 deaths per day
+	- Heart Disease: 2,353 deaths per day
+	- Cancer: 1,661 deaths per day
+	- Diabetes: 232 deaths per day
+	- Suicides: 123 deaths per day
+	- Car accidents: 102 deaths per day
 - **Epidemic:** The [CDC and WHO define an epidemic threshold](#COVID-19_Analysis) as the week when the number of cases surpass 200 per week per 100,000 people.  In the example of California and Texas (the two most populous states), they are 53.7% and 64.3% below epidemic levels respectively, with the week of May 9 being the worst week of new cases.
 - **Lock-Down:** Lock-downs are not effective in preventing the spread of COVID-19 unless a total lockdown is enforced, e.g. no mail delivery, no grocery shopping, no movement of any kind for 2-4 weeks.  The US Supreme Court recently ruled this as unconstitutional, so a total lock-down is not going to be enforced in the US.  [This section](#Open_for_Business_plots) provides nice plots of a continued spread  while both Texas and California were locked down.
 - **Re-opening:** Social distancing and stay-at-home orders are ineffective; in particular see the comparison of [California and Texas](#Open_for_Business).  The USA now has a [log-log slope](#log-log_plot) less than the slope for monthly doubling time. This is an indication that the USA, like many countries, has been successful in dramatically slowing the spread of COVID-19.  Also note that many countries have started to re-open and the slope is unchanged after re-opening.  Texas was one of the first states to re-open, and the data suggests that re-opening has little effect on the spread of COVID-19.
