@@ -20,6 +20,32 @@ This analysis is based on the study of data science and machine learning applied
 You can get the latest information for the USA at [coronavirus.gov](https://www.coronavirus.gov/).
 
 
+
+
+# Summary
+We have been tracking this issue for the last 11 months using COVID-19 raw data obtained from the [CDC and John's Hopkins](#Data_Collection). In summary we have found the following:
+
+- **Death toll:** Initially the CDC expected 520,000 deaths in the US; roughly 0.157% of the total US population, with a worst case projection of 2.5 million deaths.  As of December 1, the [death toll is 0.081% of the US population, or 51% of the initial estimates by the CDC](#COVID-19_Analysis) (however, the pandemic is not over yet). **It is important to keep this pandemic in perspective compared to other causes of death.**  The present COVID-19 death rate is 803.2 deaths per day, compare this to the [top 5 causes of death (averages per day) in the USA](#Averages): 
+	- Cancer: 26,302 deaths per day
+	- Heart Disease: 24,658 deaths per day
+	- Diabetes: 3,753 deaths per day
+	- Car accidents: 3,287 deaths per day
+	- Suicides: 3,000 deaths per day
+- **Epidemic:** The [CDC and WHO define an epidemic threshold](#COVID-19_Analysis) as the week when the number of cases surpass 200 per week per 100,000 people.  In the example of California and Texas (the two most populous states), they are 53.7% and 64.3% below epidemic levels respectively, with the week of May 9 being the worst week of new cases.
+- **Lock-Down:** Lock-downs are not effective in preventing the spread of COVID-19 unless a total lockdown is enforced, e.g. no mail delivery, no movement of any kind for 2-4 weeks.  The US Supreme Court recently ruled this as unconstitutional.  [This section](#Open_for_Business_plots) provides nice plots of a continued spread  while both Texas and California were locked down.
+- **Re-opening:** Social distancing and stay-at-home orders are ineffective; in particular see the comparison of [California and Texas](#Open_for_Business).  The USA now has a [log-log slope](#log-log_plot) less than the slope for monthly doubling time. This is an indication that the USA, like many countries, has been successful in dramatically slowing the spread of COVID-19.  Also note that many countries have started to re-open and the slope is unchanged after re-opening.  Texas was one of the first states to re-open, and the data suggests that re-opening has little effect on the spread of COVID-19.
+- **R0:** CDC initial estimates of the rate of spread, R0, was 2.5-5.  [Current data suggests R0=1.17](#R_nought) (not very contagious), before and during lock-down.  For reference the common flu is R0=0.9-2.1, and measles is R0=12-18 (very contagious).
+- **Testing:** [According to multiple studies](#Bayes_Theorem_and_Coronavirus), there are four types of COVID-19 tests.  Of them, the **false-positive rate is 15-45%**.  As more data is collected and testing improves, the CDC anticipates false positive rates similar to other tests, e.g. AIDS testing has a false-positive rate less than 1%.  A recent 2020 study by the premiere science journal [Nature](https://www.nature.com/articles/s41591-020-0843-2) found that the majority of those infected with COVID-19 did not spread the "viral load" regardless of using a face mask.
+- **Mental Health:** [According to the literature](#Open_for_Business) on isolation and lock-downs due to epidemics, the secondary effects generally fall into two categories; mental health and economic health.  The [Didi Hirsch Suicide Hotline](https://didihirsch.org/media/recent-coverage/oc-register-suicide-help-hotline-calls-soar-in-southern-california-over-coronavirus-anxieties/) noted an **8000% increase** (that is not a typo) in call volume for March and April, and a significant increase in suicides.  The [National Domestic Violence Hotline](https://www.thehotline.org/help/) noted a 45% increase in calls, and the highest number of domestic violence related deaths in 11 years.
+- **Economic Health:** According to a [World Bank study](https://elibrary.worldbank.org/doi/abs/10.1596/1813-9450-5391), 77% debt-to-GDP is the tipping point for an economy prior to recession.  The current [USA debt-to-GDP](https://www.bea.gov/data/gdp/gross-domestic-product) is 110%.
+- **Stock Market:** According to [data pulled from 1920-2020](#Stock_Market_Analysis), events of economic decline were always followed by a return.  For example, after the 9/11 attacks, the stock market had a drop for 61 days before returning to pre-9/11 levels.  Similarly, the 2008 Recession took 532 days to recover.  Historical data suggests that the current drop may last several months.  Actual data demonstrated that **in 2020, the stock market recovered in 200 days** (05/01/2020 to 11/17/2020).
+- **Population:** [Current data suggests](#Open_for_Business) that the least COVID-19 affected population is ages 0-18 (so far only 12 child deaths in the US), and the most affected population is 65+ with pre-existing health conditions.  the [65+ age group account for 95% of the COVID-19 deaths](https://www.medrxiv.org/content/10.1101/2020.04.05.20054361v1.full.pdf).
+- **Masks:** The [latest research](#Masks) indicates that masks are **less than 3% effective** in preventing COVID-19 transmission. Specifically, **COVID-19 particulates are smaller than consumer masks are able to filter**. 
+- **Hyrdoxychloroquine:** Chloroquine, used to treat malaria since the 1800's, has many derivatives, e.g. Hyrdoxychloroquine, for prophylactic use. The [latest research](#Hyrdoxychloroquine) indicates that "Chloroquine has strong antiviral effects on SARS-Coronavirus infection".
+
+
+
+
 # Table of Contents
 [1. Introduction](#Introduction)
 
@@ -53,29 +79,6 @@ You can get the latest information for the USA at [coronavirus.gov](https://www.
 
 [References](#References)
 
-
-
-
-# Preface
-We have been tracking this issue for the last 10 months using COVID-19 raw data obtained from the CDC and John's Hopkins. In summary we have found the following:
-
-- **Death toll:** Initially the CDC expected 520,000 deaths in the US; roughly 0.157% of the total US population, with a worst case projection of 2.5 million deaths.  As of December 1, the [death toll is 0.081% of the US population, or 51% of the initial estimates by the CDC](#COVID-19_Analysis) (however, the pandemic is not over yet). **It is important to keep this pandemic in perspective compared to other causes of death.**  The present COVID-19 death rate is 803.2 deaths per day, compare this to the [top 5 causes of death (averages per day) in the USA](#Averages): 
-	- Cancer: 26,302 deaths per day
-	- Heart Disease: 24,658 deaths per day
-	- Diabetes: 3,753 deaths per day
-	- Car accidents: 3,287 deaths per day
-	- Suicides: 3,000 deaths per day
-- **Epidemic:** The [CDC and WHO define an epidemic threshold](#COVID-19_Analysis) as the week when the number of cases surpass 200 per week per 100,000 people.  In the example of California and Texas (the two most populous states), they are 53.7% and 64.3% below epidemic levels respectively, with the week of May 9 being the worst week of new cases.
-- **Lock-Down:** Lock-downs are not effective in preventing the spread of COVID-19 unless a total lockdown is enforced, e.g. no mail delivery, no movement of any kind for 2-4 weeks.  The US Supreme Court recently ruled this as unconstitutional.  [This section](#Open_for_Business_plots) provides nice plots of a continued spread  while both Texas and California were locked down.
-- **Re-opening:** Social distancing and stay-at-home orders are ineffective; in particular see the comparison of [California and Texas](#Open_for_Business).  The USA now has a [log-log slope](#log-log_plot) less than the slope for monthly doubling time. This is an indication that the USA, like many countries, has been successful in dramatically slowing the spread of COVID-19.  Also note that many countries have started to re-open and the slope is unchanged after re-opening.  Texas was one of the first states to re-open, and the data suggests that re-opening has little effect on the spread of COVID-19.
-- **R0:** CDC initial estimates of the rate of spread, R0, was 2.5-5.  [Current data suggests R0=1.17](#R_nought) (not very contagious), before and during lock-down.  For reference the common flu is R0=0.9-2.1, and measles is R0=12-18 (very contagious).
-- **Testing:** [According to multiple studies](#Bayes_Theorem_and_Coronavirus), there are four types of COVID-19 tests.  Of them, the **false-positive rate is 15-45%**.  As more data is collected and testing improves, the CDC anticipates false positive rates similar to other tests, e.g. AIDS testing has a false-positive rate less than 1%.  A recent 2020 study by the premiere science journal [Nature](https://www.nature.com/articles/s41591-020-0843-2) found that the majority of those infected with COVID-19 did not spread the "viral load" regardless of using a face mask.
-- **Mental Health:** [According to the literature](#Open_for_Business) on isolation and lock-downs due to epidemics, the secondary effects generally fall into two categories; mental health and economic health.  The [Didi Hirsch Suicide Hotline](https://didihirsch.org/media/recent-coverage/oc-register-suicide-help-hotline-calls-soar-in-southern-california-over-coronavirus-anxieties/) noted an **8000% increase** (that is not a typo) in call volume for March and April, and a significant increase in suicides.  The [National Domestic Violence Hotline](https://www.thehotline.org/help/) noted a 45% increase in calls, and the highest number of domestic violence related deaths in 11 years.
-- **Economic Health:** According to a [World Bank study](https://elibrary.worldbank.org/doi/abs/10.1596/1813-9450-5391), 77% debt-to-GDP is the tipping point for an economy prior to recession.  The current [USA debt-to-GDP](https://www.bea.gov/data/gdp/gross-domestic-product) is 110%.
-- **Stock Market:** According to [data pulled from 1920-2020](#Stock_Market_Analysis), events of economic decline were always followed by a return.  For example, after the 9/11 attacks, the stock market had a drop for 61 days before returning to pre-9/11 levels.  Similarly, the 2008 Recession took 532 days to recover.  Historical data suggests that the current drop may last several months.  Actual data demonstrated that **in 2020, the stock market recovered in 200 days** (05/01/2020 to 11/17/2020).
-- **Population:** [Current data suggests](#Open_for_Business) that the least COVID-19 affected population is ages 0-18 (so far only 12 child deaths in the US), and the most affected population is 65+ with pre-existing health conditions.  the [65+ age group account for 95% of the COVID-19 deaths](https://www.medrxiv.org/content/10.1101/2020.04.05.20054361v1.full.pdf).
-- **Masks:** The [latest research](#Masks) indicates that masks are **less than 3% effective** in preventing COVID-19 transmission. Specifically, **COVID-19 particulates are smaller than consumer masks are able to filter**. 
-- **Hyrdoxychloroquine:** Chloroquine, used to treat malaria since the 1800's, has many derivatives, e.g. Hyrdoxychloroquine, for prophylactic use. The [latest research](#Hyrdoxychloroquine) indicates that "Chloroquine has strong antiviral effects on SARS-Coronavirus infection".
 
 
 
